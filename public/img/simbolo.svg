@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 115" fill="none">
+  <defs>
+    <linearGradient id="fio-e" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#c7d3dd" stop-opacity="0"/>
+      <stop offset="0.6" stop-color="#c7d3dd"/>
+    </linearGradient>
+    <linearGradient id="fio-d" x1="1" x2="0" y1="0" y2="0">
+      <stop offset="0" stop-color="#c7d3dd" stop-opacity="0"/>
+      <stop offset="0.6" stop-color="#c7d3dd"/>
+    </linearGradient>
+  </defs>
+  <path d="M1 56.8 Q24 55 46 54.6 L46 59 Q24 58.6 1 56.8Z" fill="url(#fio-e)"/>
+  <path d="M195 56.8 Q172 55 150 54.6 L150 59 Q172 58.6 195 56.8Z" fill="url(#fio-d)"/>
+  <ellipse cx="98.2" cy="57.5" rx="52.8" ry="54.3" stroke="#c7d3dd" stroke-width="4.8"/>
+  <path d="M47 57 L67 57.3 C72.5 57.6 73.5 60.5 75 66.5 C76.6 73 80.2 74 82 67.5 L88.6 41.5 C90 36.6 92.6 36.6 93.8 41.5 L101.6 79.2 C103 84.6 106.2 84.6 107.2 79 L113.6 33.6 C114.8 27.6 118 27.6 119.4 33.6 L123.4 48.8 C125 54.6 127 55.4 131 55.4 L149.5 55.4"
+        stroke="#c7d3dd" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

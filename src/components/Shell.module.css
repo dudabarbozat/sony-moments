@@ -1,0 +1,88 @@
+.aparelho { min-height: 100dvh; }
+.app {
+  position: relative; display: flex; flex-direction: column;
+  height: 100dvh; max-width: 440px; margin: 0 auto; background: var(--fundo); overflow: hidden;
+}
+.status { display: none; }
+
+@media (min-width: 600px) and (min-height: 640px) {
+  .aparelho { display: grid; place-items: center; padding: 24px; background: var(--fundo-3); }
+  .app {
+    width: 414px; max-width: 414px; height: min(896px, calc(100dvh - 48px));
+    border-radius: 54px; border: 11px solid #0c080c;
+    box-shadow: 0 0 0 4px #f3dccb, 0 30px 60px rgba(20, 6, 20, 0.45);
+  }
+  .status {
+    display: flex; justify-content: space-between; align-items: center; flex: none;
+    height: 40px; padding: 10px 26px 0 34px; font-weight: 600; font-size: 15px;
+  }
+  .statusIcones { display: flex; gap: 5px; align-items: center; }
+}
+
+.topo {
+  flex: none; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 10px var(--margem) 6px; min-height: 74px;
+}
+.marca { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--gelo); }
+.marca span { font-family: var(--fonte-titulo); font-weight: 700; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; }
+.voltar { color: var(--branco); display: grid; place-items: center; width: 44px; height: 44px; margin-left: -10px; background: none; border: 0; cursor: pointer; border-radius: 50%; }
+.voltar:hover { background: rgba(255, 255, 255, 0.06); }
+.perfil {
+  position: relative; width: 56px; height: 56px; border-radius: 50%; padding: 4px;
+  border: 2.5px solid var(--magenta); display: grid; place-items: center; flex: none;
+}
+.perfil > span:first-child {
+  width: 100%; height: 100%; border-radius: 50%; display: grid; place-items: center;
+  background: linear-gradient(135deg, #e7cff0, var(--lilas)); color: var(--fundo);
+  font-family: var(--fonte-titulo); font-weight: 800; font-size: 19px;
+}
+
+.conteudo {
+  flex: 1; overflow-y: auto; overflow-x: hidden; outline: none;
+  padding: 2px var(--margem) 36px;
+  scrollbar-width: thin; scrollbar-color: var(--fundo-3) transparent;
+}
+.conteudo > * { animation: surgir .25s ease-out; }
+@keyframes surgir { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.rodape {
+  margin-top: 34px; padding-top: 14px; border-top: 1px solid rgba(180, 146, 181, 0.2);
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 10px;
+  font-size: 12px; color: var(--lilas);
+}
+.rodape p { flex: 1 1 100%; }
+.rodapeLink { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.rodapeLink:hover { color: var(--lilas-claro); }
+
+.abas {
+  flex: none; position: relative; z-index: 5; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center;
+  height: calc(var(--abas) + env(safe-area-inset-bottom, 0px)); padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: var(--nav);
+}
+.aba { display: grid; place-items: center; height: 100%; color: var(--aba-inativa); text-decoration: none; }
+.aba svg { width: 34px; height: 34px; stroke-width: 1.5; }
+.aba[aria-current="page"] { color: var(--magenta); }
+.aba:hover { color: var(--lilas-claro); }
+.aba[aria-current="page"]:hover { color: var(--magenta); }
+.aba:focus-visible { outline-offset: -6px; }
+.abaCamera { position: relative; color: #c45cb3; }
+.abaCamera[aria-current="page"] { color: var(--magenta); }
+.bolha { position: absolute; left: 50%; top: -30px; transform: translateX(-50%); width: 104px; height: 104px; display: grid; place-items: center; }
+.bolha::before {
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: var(--nav); border: 1.5px solid var(--nav-anel); clip-path: inset(0 0 71% 0);
+}
+.abaCamera svg { position: relative; width: 50px; height: 50px; stroke-width: 1.8; }
+
+.aviso {
+  position: absolute; left: 50%; bottom: calc(var(--abas) + 14px + env(safe-area-inset-bottom, 0px));
+  transform: translate(-50%, 10px); z-index: 30; max-width: calc(100% - 32px); width: max-content;
+  background: var(--lilas-claro); color: var(--fundo); padding: 10px 16px; font-size: 14px; font-weight: 500; border-radius: 6px;
+  opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; box-shadow: 0 8px 20px rgba(15, 3, 15, 0.4);
+}
+.avisoVisivel { opacity: 1; transform: translate(-50%, 0); }
+
+@media (max-width: 370px) {
+  .marca span { font-size: 11px; letter-spacing: 0.1em; }
+  .perfil { width: 50px; height: 50px; }
+}

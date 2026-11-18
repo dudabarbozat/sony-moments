@@ -1,0 +1,57 @@
+/* Sony Moments — tokens da identidade do pitch do Time 20 (cores medidas por conta-gotas). */
+:root {
+  --fundo: #331732;
+  --fundo-2: #4b2d49;
+  --fundo-3: #6d4a6b;
+  --lilas: #b492b5;
+  --lilas-claro: #efdeef;
+  --gelo: #c7d3dd;
+  --nav: #261125;
+  --nav-anel: #4c1351;
+  --magenta: #df23bc;
+  --magenta-1: #9a198e;
+  --magenta-2: #c723a6;
+  --legenda: #978a97;
+  --legenda-texto: #331832;
+  --aba-inativa: #a0559c;
+  --ok: #9fe0c0;
+  --erro: #ffb4c8;
+  --branco: #ffffff;
+  --gradiente: linear-gradient(160deg, var(--magenta-1) 0%, var(--magenta-2) 100%);
+  --fonte-titulo: var(--fonte-montserrat), "Segoe UI", system-ui, sans-serif;
+  --fonte-ui: var(--fonte-poppins), "Segoe UI", system-ui, sans-serif;
+  --fonte-rotulo: "Aileron", var(--fonte-montserrat), system-ui, sans-serif;
+  --margem: clamp(18px, 6.5vw, 30px);
+  --abas: 70px;
+  --raio: 10px;
+  --sombra: 0 10px 24px rgba(15, 3, 15, 0.35);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--branco);
+  font-family: var(--fonte-ui);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, p { margin: 0; }
+button, input { font: inherit; color: inherit; }
+img, canvas, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--magenta); outline-offset: 3px; border-radius: 4px; }
+
+.visualmente-oculto {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+@keyframes brilho-esqueleto { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+@keyframes surgir { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

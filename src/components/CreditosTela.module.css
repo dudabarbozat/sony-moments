@@ -1,0 +1,9 @@
+.lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.item { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: start; }
+.mini { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; background: var(--fundo-2); }
+.texto { min-width: 0; font-size: 13px; line-height: 1.4; color: var(--lilas-claro); }
+.texto p { margin: 0; overflow-wrap: anywhere; }
+.nome { font-weight: 600; color: var(--gelo); }
+.meta { color: var(--lilas); margin-top: 2px; }
+.link { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.link:hover { color: var(--gelo); }

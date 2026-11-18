@@ -1,0 +1,60 @@
+.sub { color: var(--lilas); font-size: 13px; margin-bottom: 14px; }
+.pessoas { list-style: none; margin: 0 0 18px; padding: 0; display: flex; gap: 10px; flex-wrap: wrap; }
+.pessoas li { display: grid; justify-items: center; gap: 3px; font-size: 11px; color: var(--lilas-claro); }
+.avatar {
+  display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  color: var(--fundo); border: 2px solid var(--magenta); box-shadow: inset 0 0 0 2px var(--fundo);
+  font-family: var(--fonte-titulo); font-size: 15px; font-weight: 800;
+}
+.avatarMini { width: 26px; height: 26px; font-size: 11px; border-width: 1.5px; }
+
+.capaFundo { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.05); }
+.info { padding-top: 10px; }
+.faixaTitulo { font-weight: 600; font-size: 16px; line-height: 1.25; }
+.faixaSub { font-size: 12.5px; }
+.progresso { height: 4px; border-radius: 2px; background: rgba(51, 24, 50, 0.3); overflow: hidden; margin-top: 8px; }
+.progresso i { display: block; height: 100%; background: var(--fundo); transition: width .25s linear; }
+.tempos { display: flex; justify-content: space-between; font-size: 11.5px; margin-top: 3px; }
+
+.votacao { margin-top: 16px; }
+.votosLinha { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 28px; }
+.votosNum { font-size: 14px; color: var(--lilas-claro); }
+.votosNum b { font-family: var(--fonte-titulo); font-weight: 800; font-size: 20px; color: var(--branco); }
+.votantes { list-style: none; margin: 0; padding: 0; display: flex; }
+.votantes li + li { margin-left: -7px; }
+.votosBarra { height: 4px; border-radius: 2px; background: var(--fundo-2); margin-top: 8px; overflow: hidden; }
+.votosBarra i { display: block; height: 100%; background: var(--magenta); transition: width .3s; }
+
+.plano {
+  display: flex; align-items: center; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap;
+  margin-top: 18px; padding: 12px 14px; background: var(--fundo-2); border-radius: var(--raio);
+}
+.plano p { margin: 0; }
+.chave { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; position: relative; font-size: 14px; font-weight: 500; }
+.chave small { color: var(--lilas); font-weight: 400; }
+.chave input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.trilho { width: 40px; height: 22px; border-radius: 99px; background: var(--fundo-3); position: relative; transition: background-color .15s; flex: none; }
+.trilho::after { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--lilas-claro); transition: transform .15s; }
+.chave input:checked + .trilho { background: var(--magenta); }
+.chave input:checked + .trilho::after { transform: translateX(18px); background: var(--branco); }
+.chave input:focus-visible + .trilho { outline: 2px solid var(--lilas-claro); outline-offset: 2px; }
+
+.anuncio {
+  margin-top: 12px; border: 1.5px dashed var(--fundo-3); border-radius: var(--raio); padding: 12px 14px;
+  display: flex; gap: 12px; align-items: center; font-size: 12.5px; color: var(--lilas);
+}
+.anuncioTag { font-family: var(--fonte-rotulo); font-weight: 700; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--fundo-3); border-radius: 3px; padding: 2px 6px; flex: none; color: var(--lilas-claro); }
+
+.secaoLinha { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin: 26px 0 6px; }
+.secaoLinha h2 { margin: 0; }
+.segmentado { display: inline-flex; border: 1.5px solid var(--fundo-3); border-radius: 99px; padding: 2px; }
+.segmentado button { border: 0; background: none; padding: 5px 12px; border-radius: 99px; font-size: 12.5px; color: var(--lilas-claro); cursor: pointer; }
+.segmentado button[aria-pressed="true"] { background: var(--gradiente); color: var(--branco); }
+.rankBarra { display: block; height: 3px; border-radius: 2px; background: var(--fundo-2); margin-top: 5px; overflow: hidden; }
+.rankBarra i { display: block; height: 100%; background: var(--magenta); }
+
+.salas { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.salaArtista { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; background: var(--fundo-2); border-radius: var(--raio); padding: 14px; }
+.quando { font-family: var(--fonte-rotulo); font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #f07ad8; }
+.salaArtista h3 { font-family: var(--fonte-titulo); font-weight: 700; font-size: 16px; margin-top: 2px; color: var(--gelo); }
+.artista { color: var(--lilas); font-size: 12.5px; }

@@ -1,0 +1,13 @@
+.moldura { position: relative; width: calc(100% - 48px); margin: 0 auto; aspect-ratio: 1080 / 976; }
+.cartao { width: 100%; height: 100%; border-radius: var(--raio); box-shadow: var(--sombra); }
+.oculto { visibility: hidden; }
+.esqueleto { position: absolute; inset: 0; border-radius: var(--raio); }
+.trocar { border: 0; padding: 0 20px; margin: 14px 0 4px; min-width: 0; }
+.trocarLista { display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 6px; scrollbar-width: none; }
+.trocarLista span { font-size: 13px; min-height: 34px; padding: 0 13px; }
+.opcoes { padding: 0 20px; }
+
+@media (max-width: 400px) {
+  .moldura { width: 100%; }
+  .trocar, .opcoes { padding: 0; }
+}
