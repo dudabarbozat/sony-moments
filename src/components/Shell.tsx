@@ -39,6 +39,23 @@ export function Shell({ children }: { children: ReactNode }) {
 
   return (
     <div className={s.aparelho}>
+      <aside className={s.lateral} aria-label="Sobre o protótipo">
+        <Simbolo largura={64} />
+        <p className={s.lateralNome}>Moments</p>
+        <p>App que sugere músicas a partir de uma foto, gera um cartão compartilhável e abre uma sala para ouvir com amigos.</p>
+        <p><b>Para quem é:</b> jovens que ouvem música todo dia e associam momentos da vida a canções.</p>
+        <ul className={s.lateralLista}>
+          <li><Icone nome="camera" tamanho={20} /><span><b>Leitura da foto</b> no navegador, que define o clima da música.</span></li>
+          <li><Icone nome="nota" tamanho={20} /><span><b>4 sugestões</b> do catálogo do iTunes, com prévia de 30 s.</span></li>
+          <li><Icone nome="enviar" tamanho={20} /><span><b>Cartão compartilhável</b> com a foto e a música.</span></li>
+          <li><Icone nome="pessoas" tamanho={20} /><span><b>Sala com amigos</b> com fila, votação e ranking.</span></li>
+        </ul>
+        <a className={`${ui.botao} ${ui.botaoContorno} ${ui.botaoPequeno}`} href="https://github.com/dudabarbozat/sony-moments" target="_blank" rel="noreferrer">
+          <Icone nome="github" tamanho={18} />
+          Ver o código no GitHub
+        </a>
+        <p className={s.lateralNota}>Proposta do Time 20 para um hackathon da Sony, reconstruída em 2026 como protótipo navegável. Não é um produto oficial da Sony.</p>
+      </aside>
       <div className={s.app}>
         <div className={s.status} aria-hidden="true">
           <span>9:41</span>
